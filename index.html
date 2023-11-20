@@ -5,7 +5,9 @@
   <title></title>
   <style type="text/css">
     body {
-      background: black;
+      background: #000;
+      color:  #fff;
+      font-family: monospace;
     }
     main {
       display: grid;
@@ -16,9 +18,20 @@
       padding: 2.5%;
       width: 95%;
     }
+
+    .cell {
+      border: 1px solid;
+    }
   </style>
 </head>
 <body>
+  <header>
+    <h1>"three balls thrown in the air to get a straight line"</h1>
+    <h3>Stable Diffusion checkpoint: v1-5-pruned-emaonly.safetensors [6ce0161689]</h3>
+    <h3>Sampling Method: DPM++ 2M Karras</h3>
+    <h3>Sampling steps: 20</h3>
+    <h3>CFG Scale: 7</h3>
+  </header>
   <main id="main">
     <div style="width: 50px; height: 50px; background: blue;"></div>
     <div style="width: 50px; height: 50px; background: blue;"></div>
@@ -58,6 +71,14 @@
   ]
 
 
-  document.getElementById('main').innerHTML = images.map(i => `<a href="./${i}"><img src="./${i}"></a>`).join('')
+  document.getElementById('main').innerHTML = images.map(i => `
+    <div class="cell">
+      <a href="./${i}">
+        <img src="./${i}">
+      </a>
+      <div># ${Number(i.split('-')[0])}</div>
+      <div>${i.split('-')[1].split('.')[0]}</div>
+    </div>
+  `).join('')
 </script>
 </html>
