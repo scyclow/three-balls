@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style type="text/css">
+    body {
+      background: black;
+    }
+    main {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+    }
+
+    img {
+      padding: 2.5%;
+      width: 95%;
+    }
+  </style>
+</head>
+<body>
+  <main id="main">
+    <div style="width: 50px; height: 50px; background: blue;"></div>
+    <div style="width: 50px; height: 50px; background: blue;"></div>
+    <div style="width: 50px; height: 50px; background: blue;"></div>
+    <div style="width: 50px; height: 50px; background: blue;"></div>
+    <div style="width: 50px; height: 50px; background: blue;"></div>
+    <div style="width: 50px; height: 50px; background: blue;"></div>
+    <div style="width: 50px; height: 50px; background: blue;"></div>
+    <div style="width: 50px; height: 50px; background: blue;"></div>
+    <div style="width: 50px; height: 50px; background: blue;"></div>
+    <div style="width: 50px; height: 50px; background: blue;"></div>
+  </main>
+
+</body>
+
+
+<script type="text/javascript">
+  const images = [
+  '00000-615550218.png',  '00001-2749547188.png',
+  '00002-537497223.png',  '00003-4102644542.png',
+  '00004-2997119358.png', '00005-1542626795.png',
+  '00006-786043148.png',  '00007-2011683780.png',
+  '00008-3903063383.png', '00009-87504141.png',
+  '00010-2925283062.png', '00011-1023095420.png',
+  '00012-1584123530.png', '00013-873793658.png',
+  '00014-2394533842.png', '00015-2746950638.png',
+  '00016-843374671.png',  '00017-2162072431.png',
+  '00018-1427327045.png', '00019-3116545681.png',
+  '00020-4116102159.png', '00021-1680531343.png',
+  '00022-4294609216.png', '00023-1671890708.png',
+  '00024-1331892870.png', '00025-5454313.png',
+  '00026-2909633337.png', '00027-3647299398.png',
+  '00028-211454578.png',  '00029-4272011294.png',
+  '00030-1753037574.png', '00031-2860482254.png',
+  '00032-2257734126.png', '00033-1679629123.png',
+  '00034-1358000351.png', '00035-204143464.png'
+  ]
+
+
+  document.getElementById('main').innerHTML = images.map(i => `<a href="./${i}"><img src="./${i}"></a>`).join('')
+</script>
+</html>
